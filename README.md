@@ -59,6 +59,9 @@ O projeto utiliza a API pública e gratuita da **CoinGecko**.
   - `vs_currency=brl`: Para obter os preços em Real Brasileiro.
   - `order=market_cap_desc`: Ordenar por capitalização de mercado em ordem decrescente.
   - `per_page=10`: Limitar a quantidade de moedas por página.
+ 
+    
+    ![Tela inicial do projeto](assets/tela-inicial.png)
 
 ## 📝 Próximos Passos (Funcionalidades a serem implementadas)
 

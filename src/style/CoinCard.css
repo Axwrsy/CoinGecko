@@ -1,0 +1,47 @@
+.crypto-card {
+    background-color: #6e84a0;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    transition: transform 0.2s;
+  }
+  
+  /*ao passar o mouse fica em negrito*/
+  .crypto-card:hover {
+    transform: scale(1.05);
+    font-weight: bolder;
+  }
+  
+  .crypto-card img {
+    width: 40px;
+    height: 40px;
+  }
+  
+   /*valor subindo*/
+  .crypto-card .up {
+    color: #054b05;
+  }
+  
+  /*valor caindo*/
+  .crypto-card .down {
+    color: #aa0b0b;
+  }
+  
+  .see-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #094381;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .see-more:hover{
+    font-weight: bolder;
+    color: whitesmoke;
+  }

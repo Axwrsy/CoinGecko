@@ -1,0 +1,117 @@
+:root{
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+/* header*/
+.navbar {
+    background-color: #061558;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1560px;
+    transition: all 0.5s;
+    z-index: 997;
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* class menu - sub*/
+  .nav-links {
+  list-style: none;
+  display: flex;        /* <- isso coloca os itens lado a lado */
+  gap: 40px;            /* <- espaçamento entre os itens */
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  align-items: center;
+
+}
+
+  
+  /* menu inicio - letras */
+  .nav-links li a {
+    color:#fafbff; 
+    text-decoration:none; 
+    padding:5px 10px;
+    display:block;
+    font-size: larger;
+  }
+
+
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  /* FUNDO DO DROP*/
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* mantém o menu abaixo */
+    left: 0;
+    display: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    z-index: 10;
+    background-color:rgb(33, 48, 119);
+    
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    
+  }
+
+
+  .dropdown-menu li {
+    margin: 0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none;
+   
+  }
+  
+  /*oq tem dentro do drop (as moedas)*/
+  .dropdown-menu li a {
+    color: #9e9c9c;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    list-style-type: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /*em relação ao icon */
+  .search-container {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+
+  .search{
+    border-radius: 10px;
+    width: 353px;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

@@ -68,6 +68,3 @@ O projeto utiliza a API pública e gratuita da **CoinGecko**.
 - [ ] Adicionar mais informações na página de detalhes da moeda (volume, capitalização de mercado, etc.).
 
 
-## 📁 Estrutura do Projeto
-
-A estrutura do projeto segue a convenção de pastas para aplicações React.

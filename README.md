@@ -69,5 +69,3 @@ O projeto utiliza a API pública e gratuita da **CoinGecko**.
 - [ ] Criar uma página dedicada para exibir a lista de moedas favoritas.
 - [ ] Aprimorar a estilização e a responsividade da aplicação.
 - [ ] Adicionar mais informações na página de detalhes da moeda (volume, capitalização de mercado, etc.).
-
-

@@ -43,8 +43,8 @@ const CoinChart = ({ coinId }) => {
   // o efeito roda sempre que coinId muda, para atualizar os dados do gráfico
 
   return (
-    <div style={{ width: '100%', height: 300 }}>
-      {/* div container com largura 100% e altura fixa 300px para o gráfico */}
+    <div style={{ width: 1265, height: 300, paddingTop: '120px' }}>
+      {/* div container para o tamanho do gráfico */}
 
       <ResponsiveContainer>
         {/* container responsivo que adapta o gráfico ao tamanho do container pai */}

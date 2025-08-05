@@ -8,6 +8,8 @@
     text-align: center;
     color: white;
     transition: transform 0.2s;
+   
+    margin-top: 120px; /* espaçamento*/
   }
   
   /*ao passar o mouse fica em negrito*/

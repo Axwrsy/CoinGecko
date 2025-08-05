@@ -1,68 +1,55 @@
 import { useEffect, useState } from 'react'
-// importa os hooks useEffect e useState do react
-
-import { Link } from 'react-router-dom'
-// importa Link do react-router-dom para navegação entre páginas (não usado neste código, mas importado)
-
 import axios from 'axios'
-// importa axios para fazer requisições http
-
 import '../style/Home.css'
-// importa arquivo css para estilização da página
+import CoinCard from '../components/CoinCard'
+// import SearchBar from '../components/SearchBar' // Não precisa mais importar SearchBar
+// import Header from '../components/Header'; // Não precisa mais importar Header
 
-import CoinCard from './CoinCard'
-// importa o componente CoinCard que vai mostrar cada moeda individualmente
-
-//importa o searchbar para pesquisar
-import SearchBar from './SearchBar'
-
-function Home() {
-  // componente funcional que mostra a lista de moedas
-
+// O componente Home agora recebe a prop 'searchTerm' do App.jsx
+//prop = passar de um componente pai pra um filho
+function Home({ searchTerm }) {
   const [coins, setCoins] = useState([])
-  // estado local 'coins' que guarda a lista de moedas, inicialmente vazio
-
- 
 
   useEffect(() => {
-    // hook que roda ao montar o componente para buscar os dados da API
-
     axios.get('https://api.coingecko.com/api/v3/coins/markets', {
-      // faz requisição GET para a API do CoinGecko com os parâmetros abaixo
-
       params: {
-        vs_currency: 'brl',          // moeda em real brasileiro
-        order: 'market_cap_desc',    // ordena por capitalização de mercado decrescente
-        per_page: 20,                // traz 20 moedas por página
-        page: 1,                     // página 1
-        sparkline: false             // não traz dados do sparkline (mini gráfico)
+        vs_currency: 'brl',
+        order: 'market_cap_desc',
+        per_page: 20,
+        page: 1,
+        sparkline: false
       }
     }).then(res => {
       setCoins(res.data)
-      // atualiza o estado com a lista de moedas retornada da API
     }).catch(err => {
       console.error('erro ao buscar moeda', err)
-      // em caso de erro na requisição, exibe no console
     })
   }, [])
-  // o efeito roda somente uma vez ao montar o componente (array de dependências vazio)
-
-
   
+  // A Home não precisa mais da função handleSearch, pois ela já está no App.jsx
+  
+  // Lógica de filtro para moedas usando o searchTerm recebido por prop
+  const filteredCoins = coins.filter(coin =>
+    coin.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    coin.symbol.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className='crypto-container'>
-      {/* container principal para as moedas, com classe para estilização */}
-
-      {coins.map(coin => (
-        // percorre o array de moedas para renderizar cada CoinCard
-
-        <CoinCard key={coin.id} coin={coin} />
-        // para cada moeda, renderiza o componente CoinCard passando a moeda como prop
-        // usa o id da moeda como key para otimização do react
-      ))}
+    <div>
+      {/* Remove o Header duplicado daqui. Agora ele só aparece no App.jsx */}
+      
+      {/* retorna na pesquisa*/}
+      <div className='crypto-container'>
+        {filteredCoins.length > 0 ? (
+          filteredCoins.map(coin => (
+            <CoinCard key={coin.id} coin={coin} />
+          ))
+        ) : (
+          <p>Nenhuma moeda encontrada.</p>
+        )}
+      </div>
     </div>
   )
 }
 
 export default Home
-// exporta o componente para uso em outras partes da aplicação

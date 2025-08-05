@@ -5,16 +5,19 @@
 }
 /* header*/
 .navbar {
-    background-color: #061558;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1560px;
-    transition: all 0.5s;
-    z-index: 997;
-    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* corrige o problema do tamanho fixo */
+  background-color: #061558;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
   
   /* class menu - sub*/
   .nav-links {
@@ -100,9 +103,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 120px; /* ou ajuste para a altura exata do navbar */
     gap: 1rem;
   }
-  
+
 
   .search{
     border-radius: 10px;

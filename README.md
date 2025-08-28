@@ -61,7 +61,8 @@ O projeto utiliza a API pública e gratuita da **CoinGecko**.
   - `per_page=10`: Limitar a quantidade de moedas por página.
  
     
-    ![Tela inicial do projeto](assets/tela-inicial.png)
+   ![Tela inicial do projeto](src/assets/tela-inicial.png)
+
 
 ##  Próximos Passos (Funcionalidades a serem implementadas)
 

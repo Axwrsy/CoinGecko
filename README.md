@@ -2,7 +2,7 @@
 
 Este projeto é um dashboard de criptomoedas construído com React, que consome a API pública da CoinGecko. Ele foi desenvolvido com o propósito de aprimorar habilidades em React, gerenciamento de estado, rotas, e consumo de APIs externas.
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 O projeto permite ao usuário:
 
@@ -11,7 +11,7 @@ O projeto permite ao usuário:
 - **Ver Detalhes:** Clicar em uma moeda para visualizar uma página de detalhes com um gráfico de variação de preço dos últimos 7 dias.
 - **[Funcionalidade em desenvolvimento]** Marcar moedas como favoritas para acesso rápido.
 
-## 💻 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **React:** Biblioteca JavaScript para construção da interface do usuário.
 - **`Vite`:** Ferramenta de build para um ambiente de desenvolvimento rápido.
@@ -19,7 +19,7 @@ O projeto permite ao usuário:
 - **`react-router-dom`:** Biblioteca para gerenciar as rotas de navegação da aplicação.
 - **`recharts`:** Biblioteca de gráficos baseada em React para visualização de dados.
 
-## 🔧 Instalação e Execução
+##  Instalação e Execução
 
 Para rodar este projeto em sua máquina local, siga os passos abaixo:
 
@@ -50,7 +50,7 @@ Para rodar este projeto em sua máquina local, siga os passos abaixo:
 O aplicativo estará disponível em `http://localhost:5173/` (ou em outra porta, conforme a configuração do Vite).
 
 
-## 📊 API Utilizada
+##  API Utilizada
 
 O projeto utiliza a API pública e gratuita da **CoinGecko**.
 
@@ -63,7 +63,7 @@ O projeto utiliza a API pública e gratuita da **CoinGecko**.
     
     ![Tela inicial do projeto](assets/tela-inicial.png)
 
-## 📝 Próximos Passos (Funcionalidades a serem implementadas)
+##  Próximos Passos (Funcionalidades a serem implementadas)
 
 - [ ] Implementar a funcionalidade de "Favoritar" moedas.
 - [ ] Criar uma página dedicada para exibir a lista de moedas favoritas.
